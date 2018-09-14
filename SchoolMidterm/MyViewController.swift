@@ -19,12 +19,14 @@ class MyViewController: UIViewController {
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var volumeButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
     
     
     var player: AVPlayer?
     var playerLayer: AVPlayerLayer?
     var isPlaing = false
     var isMuted = false
+    var isExpanded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class MyViewController: UIViewController {
         playerLayer?.frame = videoView.bounds
 
     }
+    
     
     
     @IBAction func sliderChange(_ sender: UISlider) {
@@ -51,6 +54,7 @@ class MyViewController: UIViewController {
             playerLayer = AVPlayerLayer(player: player)
             playerLayer?.videoGravity = .resize
             videoView.layer.addSublayer(playerLayer!)
+            statusLabel.isHidden = true
         }
     }
     
@@ -150,12 +154,27 @@ class MyViewController: UIViewController {
     
     
     @IBAction func fullScreenPressed(_ sender: UIButton) {
+        if isExpanded == false {
+            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                
+                let value =  UIInterfaceOrientation.landscapeLeft.rawValue
+                UIDevice.current.setValue(value, forKey: "orientation")
+                self.isExpanded = true
+            })
+        } else {
+            let value =  UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(value, forKey: "orientation")
+            self.isExpanded = false
+        }
     }
-    
-    
-    
-    
 
+//    override func shouldAutorotate() -> Bool {
+//        return true
+//    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        print(UIDevice.current.orientation.isLandscape)
+    }
 
 
 }

@@ -21,8 +21,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3Q-UN-H7b">
                                 <rect key="frame" x="0.0" y="228" width="375" height="211"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前尚無影片可播放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfF-LZ-Cnb">
+                                        <rect key="frame" x="109.5" y="95.5" width="156" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.71764705882352942" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="EfF-LZ-Cnb" firstAttribute="centerY" secondItem="M3Q-UN-H7b" secondAttribute="centerY" id="559-QP-WMW"/>
+                                    <constraint firstItem="EfF-LZ-Cnb" firstAttribute="centerX" secondItem="M3Q-UN-H7b" secondAttribute="centerX" id="Rso-z7-eF8"/>
                                     <constraint firstAttribute="width" secondItem="M3Q-UN-H7b" secondAttribute="height" multiplier="16:9" id="fXx-fY-p7r"/>
                                 </constraints>
                             </view>
@@ -150,6 +160,7 @@
                         <outlet property="currentTimeLabel" destination="en4-yN-Dmg" id="lQM-OL-Rmq"/>
                         <outlet property="playButton" destination="Spb-7b-cUw" id="oFr-i6-fap"/>
                         <outlet property="searchTxt" destination="Jbn-V5-eEy" id="OQc-O5-SMc"/>
+                        <outlet property="statusLabel" destination="EfF-LZ-Cnb" id="dGh-Ab-CVL"/>
                         <outlet property="timeSlider" destination="C9f-Uz-CPj" id="NcW-Df-2gJ"/>
                         <outlet property="totalTimeLabel" destination="RRh-1m-qFu" id="WYh-kK-alX"/>
                         <outlet property="videoView" destination="M3Q-UN-H7b" id="dKZ-hE-d9Q"/>
