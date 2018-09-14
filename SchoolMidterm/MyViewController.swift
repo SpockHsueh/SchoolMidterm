@@ -94,7 +94,6 @@ class MyViewController: UIViewController {
             return String(format: "%02i:%02i", arguments: [minutes, seconds
                 ])
         }
-        
     }
     
     
