@@ -157,9 +157,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Videp Player" id="dFk-7V-GDn"/>
                     <connections>
+                        <outlet property="backwardsButton" destination="BYx-U6-mvg" id="cb1-Aa-Uhr"/>
+                        <outlet property="controllerButton" destination="fhq-57-FPb" id="evh-J6-xYF"/>
                         <outlet property="currentTimeLabel" destination="en4-yN-Dmg" id="lQM-OL-Rmq"/>
+                        <outlet property="forwardButton" destination="i6P-Pm-Z1j" id="ij1-M0-942"/>
+                        <outlet property="fullScreenButton" destination="yw7-t8-yNx" id="0pA-Jj-4h8"/>
                         <outlet property="playButton" destination="Spb-7b-cUw" id="oFr-i6-fap"/>
+                        <outlet property="searchButton" destination="whl-RH-tcb" id="X1u-BO-szm"/>
                         <outlet property="searchTxt" destination="Jbn-V5-eEy" id="OQc-O5-SMc"/>
+                        <outlet property="sliderButton" destination="2FI-9U-crf" id="XGk-tq-ni9"/>
                         <outlet property="statusLabel" destination="EfF-LZ-Cnb" id="dGh-Ab-CVL"/>
                         <outlet property="timeSlider" destination="C9f-Uz-CPj" id="NcW-Df-2gJ"/>
                         <outlet property="totalTimeLabel" destination="RRh-1m-qFu" id="WYh-kK-alX"/>
