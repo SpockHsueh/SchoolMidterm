@@ -37,7 +37,7 @@
                                         </constraints>
                                         <state key="normal" image="btn_volume_up"/>
                                         <connections>
-                                            <action selector="volunePressed:" destination="Fqo-Tf-HrI" eventType="touchUpInside" id="q7C-g5-czf"/>
+                                            <action selector="volumePressed:" destination="Fqo-Tf-HrI" eventType="touchUpInside" id="q7C-g5-czf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYx-U6-mvg">
@@ -148,10 +148,12 @@
                     <navigationItem key="navigationItem" title="Videp Player" id="dFk-7V-GDn"/>
                     <connections>
                         <outlet property="currentTimeLabel" destination="en4-yN-Dmg" id="lQM-OL-Rmq"/>
+                        <outlet property="playButton" destination="Spb-7b-cUw" id="oFr-i6-fap"/>
                         <outlet property="searchTxt" destination="Jbn-V5-eEy" id="OQc-O5-SMc"/>
                         <outlet property="timeSlider" destination="C9f-Uz-CPj" id="NcW-Df-2gJ"/>
                         <outlet property="totalTimeLabel" destination="RRh-1m-qFu" id="WYh-kK-alX"/>
                         <outlet property="videoView" destination="M3Q-UN-H7b" id="dKZ-hE-d9Q"/>
+                        <outlet property="volumeButton" destination="kib-JL-Yhi" id="Ylc-WV-Mj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKa-EX-dQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
